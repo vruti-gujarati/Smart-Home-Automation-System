@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Timeless Design Collection</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8e8e8;
+            color: #333;
+        }
+
+        .navbar {
+            max-width: 1300px;
+            margin: auto;
+            display: flex;
+            height: 68px;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 2rem;
+        }
+
+        .navbar .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 2.0rem;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #80aee2;
+        }
+
+        .navbar .btn {
+            background-color: #9EC6F3;
+            color: #000;
+            padding: 0.39rem 0.4rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+            border: 2px solid black;
+            transition: backgroun 0.3s;
+        }
+
+        .navbar .btn:hover {
+            background-color: #5F99AE;
+            color: black;
+        }
+
+
+        .header {
+            text-align: center;
+            padding: 87px 20px 20px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #000000;
+            font-weight: 450;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1px;
+        }
+
+        .gallery img {
+            width: 1160px;
+            height: 20%;
+            border-radius: 8px;
+            object-fit: cover;                                                       
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+
+        .second {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            height: 100px;
+            padding-bottom: 390px;
+
+
+        }
+
+        .gallery-item {
+            text-align: center;
+            background-color: #6d6c6c;
+            border-radius: 8px;
+            box-shadow: 0 7px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            border: 1px solid black;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.08);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            font-size: 16px;
+            color: #070707;
+            font-weight: 550;
+        }
+
+        @media screen and (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid.lower {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .gallery-grid,
+            .gallery-grid.lower {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SmartLiv</div>
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="product.html"><i class="fas fa-box-open"></i> Products</a></li>
+            <li><a href="solution.html"><i class="fas fa-house-signal"></i> Solutions</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="signin.html" class="btn"><i class="fas fa-person"></i> Sign In</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>Timeless Design Collection</h1>
+        <p>Elevate your space with our exquisite switches, where functionality meets elegance, and every touch is a
+            stroke of sophistication.</p>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="https://www.ahasmarthomes.com/images/smart-switch/timeless-design-collection.webp">
+        </div>
+    </div>
+
+    <div class="header">
+        <h1 style="padding-top: 0px;">Tactful Placement</h1>
+        <p>Our Affordable Smart Keypads can easily be placed everywhere in the home including bedrooms, living rooms,
+            bathrooms and even kitchens. Truly designed for India, AHA Smart Switches can also replace traditional
+            switches.</p>
+    </div>
+
+    <div class="second">
+        <div class="gallery-item">
+            <img src="https://www.ahasmarthomes.com/images/smart-switch/livingroom.webp" alt="Living Room">
+            <p>Living Room</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://www.ahasmarthomes.com/images/smart-switch/kitchen.webp" alt="Kitchen">
+            <p>Kitchen</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://www.ahasmarthomes.com/images/smart-switch/bedroom.webp" alt="Bedroom">
+            <p>Bedroom</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

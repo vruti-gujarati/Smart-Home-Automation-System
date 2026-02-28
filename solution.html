@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Smart Home Automation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.78);
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 30px;
+      margin-top:60px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .navbar {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      background-color: black;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 2rem;
+    }
+
+    .navbar .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 2.0rem;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #80aee2;
+    }
+
+    .navbar .btn {
+      background-color: #9EC6F3;
+      color: #000;
+      padding: 0.39rem 0.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      border: 2px solid black;
+      transition: backgroun 0.3s;
+    }
+
+    .navbar .btn:hover {
+      background-color: #5F99AE;
+      color: black;
+    }
+
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 5px;
+      margin-bottom: 30px;
+      text-align: center;
+      display: inline-block center;
+    }
+
+    .solutions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: auto;
+    }
+
+    .solution-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .solution-box:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    .solution-box h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .solution-box p {
+      font-size: 1rem;
+      font-weight: 400;
+      color:white;
+    }
+
+    .clickable-box {
+      display: block;
+      width: 230px;
+      height: 200px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.338);
+      color: black;
+      border-radius: 12px;
+      text-decoration: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+      transition: transform 0.2s ease;
+    }
+
+    .clickable-box:hover {
+      transform: scale(1.08);
+      cursor: pointer;
+    }
+
+    .clickable-box h3 {
+      margin: 0 0 10px;
+    }
+    
+  @media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .clickable-box {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .solutions {
+    grid-template-columns: 1fr;
+  }
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay">
+    <nav class="navbar">
+      <div class="logo">SmartLiv</div>
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="product.html"><i class="fas fa-box-open"></i> Products</a></li>
+        <li><a href="solution.html"><i class="fas fa-house-signal"></i> Solutions</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="signin.html" class="btn"><i class="fas fa-person"></i> Sign In</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Seamless Living with Whole-Home Automation</h1>
+      <p>Control Every Corner of Your Home Seamlessly</p>
+    </header>
+
+    <h2><u>Our Solutions</u></h2>
+    <section class="solutions">
+      <div class="solution-box">
+        <a href="office.html" class="clickable-box">
+          <h3>Office Automation</h3>
+          <p>Smart lighting, AC control, scheduling, etc. remote access for your workspace.</p>
+        </a>
+      </div>
+
+      <div class="solution-box">
+        <a href="livingroom.html" class="clickable-box">
+          <h3>Living Room Automation</h3>
+          <p>Voice control, smart entertainment systems, curtains, and mood lighting.</p>
+        </a>
+      </div>
+
+      <div class="solution-box">
+        <a href="bedroom.html" class="clickable-box">
+          <h3>Bedroom Automation</h3>
+          <p>Sleep mode, temperature control, alarm sync, and smart lighting.</p>
+        </a>
+      </div>
+
+      <div class="solution-box">
+        <a href="bathroom.html" class="clickable-box">
+          <h3>Bathroom Automation</h3>
+          <p>Voice-Activated Showers and Faucets, lighting, Motion sensors, and smart geyser.</p>
+        </a>
+      </div>    
+
+      <div class="solution-box">
+        <a href="kitchen.html" class="clickable-box">
+          <h3>Kitchen Automation</h3>
+          <p>Smart appliances, voice assistant integration, and safety monitoring.</p>
+        </a>
+      </div>
+
+       
+    </section>
+
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Contact Us - Smart Home Automation</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      backdrop-filter: brightness(0.5);
+    }
+    .navbar {
+      max-width: 1183px;
+      margin: auto;
+      display: flex;
+      background-color: black;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 2rem;
+    }
+
+    .navbar .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 2.0rem;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #80aee2;
+    }
+
+    .navbar .btn {
+      background-color: #9EC6F3;
+      color: #000;
+      padding: 0.39rem 0.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      border: 2px solid black;
+      transition: backgroun 0.3s;
+    }
+
+    .navbar .btn:hover {
+      background-color: #5F99AE;
+      color: black;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.2);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.5);
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .info {
+      margin-bottom: 30px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .info p {
+      margin: 10px 0;
+      color: black;
+      font-weight: 600;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      color: #333;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      color:black;
+      font-size:17px;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #000;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #243642;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color:#000 ;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #232222;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <nav class="navbar">
+      <div class="logo">SmartLiv</div>
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="product.html"><i class="fas fa-box-open"></i> Products</a></li>
+        <li><a href="solution.html"><i class="fas fa-house-signal"></i> Solutions</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="signin.html" class="btn"><i class="fas fa-person"></i> Sign In</a></li>
+      </ul>
+    </nav>
+
+  <div class="container">
+    <h1><u>Contact Us</u></h1>
+    <div class="info">
+      <h2>Company Vision</h2>
+      <p>At Smart Home Automation, our vision is to bring intelligent living into every household and office through modern and user-friendly technology.</p>
+
+      <h2>Contact Details</h2>
+      <p><strong>Email:</strong> support@smarthome.com</p>
+      <p><strong>Office Address:</strong> 123 Smart Lane, Automation City, India</p>
+      <p><strong>Contact Number:</strong> 55668-78765</p>
+    </div>
+
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="Enter your address" required />
+
+      <label for="contact">Contact Number</label>
+      <input type="tel" id="contact" placeholder="Enter 10-digit number" maxlength="10" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const phone = document.getElementById("contact").value;
+      const email = document.getElementById("email").value;
+      const phoneValid = /^[0-9]{10}$/.test(phone);
+      const emailValid = email.includes("@");
+
+      if (!phoneValid || !emailValid) {
+        alert("Please enter valid contact number (10 digits) and email (must include @)");
+      } else {
+        alert("Thank you for contacting us! We'll get back to you soon.");
+        document.getElementById("contactForm").reset();
+      }
+    });
+  </script>
+</body>
+</html>

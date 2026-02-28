@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Types of Smart Lights</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            height: 56px;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 2rem;
+        }
+
+        .navbar .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 2.0rem;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #80aee2;
+        }
+
+        .navbar .btn {
+            background-color: #9EC6F3;
+            color: #000;
+            padding: 0.39rem 0.4rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+            border: 2px solid black;
+            transition: backgroun 0.3s;
+        }
+
+        .navbar .btn:hover {
+            background-color: #5F99AE;
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            font-weight: 645;
+            margin-top: 2rem;
+            padding-bottom: 27px;
+            padding-top:80px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1077px;
+            margin: auto;
+            padding-bottom: 30px;
+    
+        }
+
+        .container {
+            position: relative;
+            width: 350px;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            transition:transform 0.2s ease;
+           
+        }
+        .container:hover{
+            transform:scale(1.08);
+            cursor:pointer;
+        }
+
+        .room-image {
+            display: block;
+            width: 350px;
+            height: 300px;
+            transition:transform 0.2s ease;
+        }
+        .room-image:hover{
+            transform:scale(1.09);
+            cursor:pointer;
+        }
+
+        .spotlight-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: 120px;
+        }
+
+        .container1 {
+            position: relative;
+            width: 360px;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            transition:transform 0.2s ease;
+        }
+        .container1:hover{
+            transform:scale(1.08);
+            cursor:pointer;
+        }
+
+
+        .room-image1 {
+            display: block;
+            width: 350px;
+            height: 300px;
+            transition:transform 0.2s ease;
+        }
+        .room-image1:hover{
+            transform:scale(1.09);
+            cursor:pointer;
+        }
+
+        .Downlight-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: 120px;
+        }
+
+        .container2 {
+            position: relative;
+            width: 350px;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            transition:transform 0.2s ease;
+        }
+        .container2:hover{
+            transform:scale(1.08);
+            cursor:pointer;
+        }
+
+
+        .room-image2 {
+            display: block;
+            width: 350px;
+            height: 300px;
+            transition:transform 0.2s ease;
+        }
+        .room-image2:hover{
+            transform:scale(1.09);
+            cursor:pointer;
+        }
+
+        .TrackLight-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: 120px;
+        }
+
+        .container3 {
+            position: relative;
+            width: 350px;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            transition:transform 0.2s ease;
+        }
+        .container3:hover{
+            transform:scale(1.08);
+            cursor:pointer;
+        }
+
+
+        .room-image3 {
+            display: block;
+            width: 350px;
+            height: 300px;
+            transition:transform 0.2s ease;
+        }
+        .room-image3:hover{
+            transform:scale(1.09);
+            cursor:pointer;
+        }
+
+        .LinearProfileLights-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: 120px;
+        }
+
+        .container4 {
+            position: relative;
+            width: 350px;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            transition:transform 0.2s ease;
+        }
+        .container4:hover{
+            transform:scale(1.08);
+            cursor:pointer;
+        }
+
+
+        .room-image4 {
+            display: block;
+            width: 350px;
+            height: 300px;
+            transition:transform 0.2s ease;
+        }
+        .room-imag4:hover{
+            transform:scale(1.09);
+            cursor:pointer;
+        }
+
+        .LinearProfileLights-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: 120px;
+        }
+
+        .container5 {
+            position: relative;
+            width: 350px;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            transition:transform 0.2s ease;
+        }
+        .container5:hover{
+            transform:scale(1.08);
+            cursor:pointer;
+        }
+
+
+        .room-image5 {
+            display: block;
+            width: 350px;
+            height: 300px;
+        }
+        .room-image5:hover{
+            transform:scale(1.09);
+            cursor:pointer;
+        }
+
+        .LinearProfileLights-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: 120px;
+        }
+
+
+        .label {
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .label1 {
+            position: absolute;
+            bottom: 30px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .grid-item {
+            text-align: center;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .grid-item p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .features {
+            background-color: #e3dbdb;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+
+        .feature-box {
+            width: 250px;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        .feature-box img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box p {
+            color: #dbcece;
+        }
+
+
+        .second {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: rgba(69, 67, 67, 0.57);
+            padding: 3rem;
+            gap: 20px;
+        }
+
+        .feature-card {
+            background-color: #ffffff92;
+            width: 18%;
+            min-width: 200px;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            font-size: 1.1;
+            color: #332f2f;
+            line-height: 1.4;
+        
+        }
+
+        .feature-card a {
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SmartLiv</div>
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="product.html"><i class="fas fa-box-open"></i> Products</a></li>
+            <li><a href="solution.html"><i class="fas fa-house-signal"></i> Solutions</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="signin.html" class="btn"><i class="fas fa-person"></i> Sign In</a></li>
+        </ul>
+    </nav>
+
+    <h1>Type of Smart Lights</h1>
+
+    <div class="main">
+
+        <div class="container">
+            <img src="https://th.bing.com/th/id/OIP.2bFb_QZab4h6uVfwBp4rWwHaFn?pid=ImgDet&w=196&h=148&c=7&dpr=1.7"
+                alt="Room with spotlights" class="room-image" />
+            <img src="https://www.ahasmarthomes.com/images/smart-light/spotlight-side.webp" alt="Spotlight icon"
+                class="spotlight-icon" />
+            <div class="label">Spotlight</div>
+        </div>
+
+        <div class="container1">
+            <img src="https://th.bing.com/th/id/OIP.EGm2aj2cMfJ1THYvj4Dx3QHaFd?pid=ImgDet&w=196&h=144&c=7&dpr=1.7"
+                alt="Room with spotlights" class="room-image1" />
+            <img src="https://www.ahasmarthomes.com/images/smart-light/downlights-side.webp" alt="Downlight"
+                class="Downlight-icon" />
+            <div class="label">Downlight</div>
+        </div>
+
+        <div class="container2">
+            <img src="https://www.ahasmarthomes.com/images/smart-light/tracklights.webp" alt="Room with spotlights"
+                class="room-image2" />
+            <img src="https://www.ahasmarthomes.com/images/smart-light/tracklights-side.webp" alt="Downlight"
+                class="TrackLight-icon" />
+            <div class="label">Track Lights</div>
+        </div>
+
+        <div class="container3">
+            <img src="https://th.bing.com/th/id/OIP.pL-QnLIl96yRAisLhsOG4wHaE8?w=1680&h=1120&rs=1&pid=ImgDetMain"
+                alt="Room with spotlights" class="room-image3" />
+            <img src="https://www.ahasmarthomes.com/images/smart-light/linear-profile-lights-side.webp" alt="Downlight"
+                class="LinearProfileLights-icon" />
+            <div class="label1">Linear Profile <br>Lights</br></div>
+        </div>
+
+        <div class="container4">
+            <img src="https://th.bing.com/th/id/OIP.nbjOIkN9LBD7lUGP6hDc4QHaEp?pid=ImgDet&w=198&h=124&c=7&dpr=1.7"
+                alt="Room with spotlights" class="room-image4" />
+            <img src="https://www.ahasmarthomes.com/images/smart-light/surface-spot-light-side.webp" alt="Downlight"
+                class="LinearProfileLights-icon" />
+            <div class="label1">Linear Profile <br>Lights</br></div>
+        </div>
+
+        <div class="container5">
+            <img src="https://www.ahasmarthomes.com/images/smart-light/smart-led-strips.webp" alt="Room with spotlights"
+                class="room-image5" />
+            <img src="https://www.ahasmarthomes.com/images/smart-light/smart-led-strips-side.webp" alt="Downlight"
+                class="LinearProfileLights-icon" />
+            <div class="label1">Linear Profile <br>Lights</br></div>
+        </div>
+
+    </div>
+
+
+    <div class="second">
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/992/992703.png" alt="Convenience">
+            <h3>Convenience</h3>
+            <p>Easy to control via switches, app or voice.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2362/2362156.png" alt="Energy Savings">
+            <h3>Energy Savings</h3>
+            <p><a href="#">Using smart sensors</a> and App Control.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png" alt="Schedule">
+            <h3>Schedule</h3>
+            <p>To turn on and off automatically.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3103/3103459.png" alt="Temperature Range">
+            <h3>Wide Temperature Range</h3>
+            <p>Warm White (2700k) – Daylight (3500k) – Cool White (6500k).</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

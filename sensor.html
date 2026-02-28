@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Timeless Design Collection</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8e8e8;
+            color: #333;
+        }
+
+        .navbar {
+            max-width: 1300px;
+            margin: auto;
+            display: flex;
+            height: 72px;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 2rem;
+        }
+
+        .navbar .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 2.0rem;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #80aee2;
+        }
+
+        .navbar .btn {
+            background-color: #9EC6F3;
+            color: #000;
+            padding: 0.39rem 0.4rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+            border: 2px solid black;
+            transition: backgroun 0.3s;
+        }
+
+        .navbar .btn:hover {
+            background-color: #5F99AE;
+            color: black;
+        }
+
+        .hero {
+            background: url('https://www.ahasmarthomes.com/images/smart-sensor/presence-sensorbg.webp') no-repeat center center/cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 0 5%;
+            max-width: 600px;
+        }
+
+        .content h1 {
+            font-size: 3.6rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: black;
+        }
+
+        .content p {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 450;
+            color: black;
+        }
+
+        .second {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        .image-side {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .image-side img {
+            width: 217%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-side {
+            flex: 1;
+            padding: 80px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-side h1 {
+            font-size: 3.0rem;
+            font-weight: 450;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .text-side p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #313030;
+        }
+
+
+        .third {
+            display: flex;
+            background: url('https://www.ahasmarthomes.com/images/smart-sensor/door-sensorbg.webp') no-repeat center center/cover;
+            flex-wrap: wrap;
+            min-height: 70vh;
+            width: 100%;
+
+        }
+
+        .left-content {
+            flex: 1;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .left-content h1 {
+            font-size: 2.8rem;
+            line-height: 1.3;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .left-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #ddd;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SmartLiv</div>
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="product.html"><i class="fas fa-box-open"></i> Products</a></li>
+            <li><a href="solution.html"><i class="fas fa-house-signal"></i> Solutions</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="signin.html" class="btn"><i class="fas fa-person"></i> Sign In</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <img src="https://www.ahasmarthomes.com/images/smart-sensor/presence-sensor.webp" />
+            <h1>Presence Sensor</h1>
+            <p>No longer do you need to wave your hard for sensors to work. This Sensors welcome you to a new era of
+                seamless responsiveness that depend solely upon a person's presence within the room.</p>
+        </div>
+    </section>
+
+
+    <div class="second">
+        <div class="image-side">
+            <img src="https://www.ahasmarthomes.com/images/smart-sensor/motion-sensorbg.webp" alt="Smart Living Room" />
+        </div>
+
+        <div class="text-side">
+            <h1><span>Motion Sensor</h1>
+            <p>
+                Ideal for use in hallways, walk-in closets, outdoor entryways,<br> and spaces where temporary
+                illumination is required.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="third">
+        <div class="left-content">
+
+            <h1>
+                Door & Window Sensor
+            </h1>
+            <p>
+                Our door and window sensors offer automated<br>responses to unauthorized access, ensuring heightened
+                security. Sirens and<br>phone notifications keep you vigilant, allowing for a manual<br>response to any
+                security threat.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Home Automation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar {
+            max-width: 1300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .navbar .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 2.0rem;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #80aee2;
+        }
+
+        .navbar .btn{
+            background-color: #9EC6F3;
+            color: #000;
+            padding: 0.39rem 0.4rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+            border: 2px solid black;
+            transition: backgroun 0.3s;
+        }
+
+        .navbar .btn:hover {
+            background-color: #5F99AE;
+            color: black;
+        }
+     
+
+        .hero {
+            height: 100vh;
+            background: url('https://www.pbctoday.co.uk/news/wp-content/uploads/2023/10/Smart-homes-scaled.jpg') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #fff;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content a {
+            background-color: #9EC6F3;
+            color: #000;
+            padding: 0.65rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            border: 2px solid black;
+            transition: backgroun 0.3s;
+        }
+
+        .hero-content a:hover {
+            background-color: #5F99AE;
+            color: black;
+        }
+
+
+        .fecture h1 {
+            font-size: 3rem;
+            color: black;
+            text-align: center;
+            margin: auto;
+            line-height: normal;
+            padding-top: 8px;
+        }
+
+        .fecture h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin: auto;
+            line-height: normal;
+
+        }
+
+        .fecture p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            margin: auto;
+            line-height: normal;
+            font-weight:400;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar ul {
+                float: none;
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .fecture h1 {
+                font-size: 2rem;
+            }
+
+            .fecture p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="homepage">
+        <header>
+            <nav class="navbar">
+                <div class="logo">SmartLiv</div>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="product.html"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="solution.html"><i class="fas fa-house-signal"></i> Solutions</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="signin.html" class="btn"><i class="fas fa-person"></i> Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to the Fucture of Living</h1>
+                <h2>Build Your Smart Home</h2>
+                <p>Live smarter with intelligent Home Automation solutions<br>
+                    Transform your living space into a smart, responsive environment tailored to your lifestyle.<br>
+                    Let's Go For Experience Smart Living with the leading Home Automation
+                </p>
+                <a href="product.html">Explore Products</a>
+            </div>
+        </section>
+
+        <div class="main">
+            <div class="fecture">
+                <h1>Transfor Your Space With Premium</h1>
+                <h2>Home Automation</h2>
+                <p>We understand that a home is every family’s safe haven. That’s <br>
+                     exactly why we’re driven to transform your home into an<br>
+                   Intelligent Living Space keeping your comfort & productivity<br>
+                                               in mind.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">s
+  <title>Smart Door Lock</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    }
+
+    .navbar {
+      max-width: 1250px;
+      margin: auto;
+      display: flex;
+      height: 72px;
+      background-color: black;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 2rem;
+    }
+
+    .navbar .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 2.0rem;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #80aee2;
+    }
+
+    .navbar .btn {
+      background-color: #9EC6F3;
+      color: #000;
+      padding: 0.39rem 0.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      border: 2px solid black;
+      transition: backgroun 0.3s;
+    }
+
+    .navbar .btn:hover {
+      background-color: #5F99AE;
+      color: black;
+    }
+
+    section {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .hero {
+      background-color: #212020;
+      color: white;
+    }
+
+    .hero-container {
+      display: flex;
+      width: 100%;
+      max-width: 1300px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero .content {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .hero .content h1 {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .hero .content h1 span {
+      color: #f4b400;
+    }
+
+    .hero .content p {
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .hero .image-area {
+      flex: 1;
+    }
+
+    .hero .image-area img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    /* Section 2: Fingerprint Unlock (Image Left) */
+    .fingerprint {
+      background-color: #000;
+      color: white;
+    }
+
+    .fingerprint-container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      /* Image on the left */
+    }
+
+    .text-container {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .text-container h1 {
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .text-container p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .image-container {
+      flex: 1;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Section 3: Remote Unlock */
+    .remote-unlock {
+      background-color: #212020;
+      color: white;
+    }
+
+    .remote-container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .remote-text {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .remote-text h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .remote-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .remote-image {
+      flex: 1;
+    }
+
+    .remote-image img {
+      width: 100%;
+      max-height: 1000px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+
+      .hero-container,
+      .fingerprint-container,
+      .remote-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero .content,
+      .text-container,
+      .image-container,
+      .hero .image-area,
+      .remote-text,
+      .remote-image {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .hero .image-area img,
+      .image-container img,
+      .remote-image img {
+        max-height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="logo">SmartLiv</div>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="product.html"><i class="fas fa-box-open"></i> Products</a></li>
+      <li><a href="solution.html"><i class="fas fa-house-signal"></i> Solutions</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      <li><a href="signin.html" class="btn"><i class="fas fa-person"></i> Sign In</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Section 1: Hero -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="content">
+        <h1>Secure your Home<br>with the perfect <span>Smart Door Lock</span></h1>
+        <p>
+          Experience enhanced security and convenience with a smart door lock.
+          Enjoy keyless entry, remote access control and real-time monitoring,
+          ensuring peace of mind and streamlined access to your home.
+        </p>
+      </div>
+      <div class="image-area">
+        <img src="https://www.ahasmarthomes.com/images/smart-lock/smartLock.webp" alt="Smart Door Lock Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Fingerprint Unlock -->
+  <section class="fingerprint">
+    <div class="fingerprint-container">
+      <div class="text-container">
+        <h1>Unlock with your Fingerprint</h1>
+        <p>
+          Unlock doors effortlessly with your fingerprint. Smart Door Lock is a modern alternative to traditional keys.
+          With support for up to 100 fingerprints, your entire family can gain access to the home without having to
+          carry or share keys ever again.
+        </p>
+      </div>
+      <div class="image-container">
+        <img src="https://i.pinimg.com/originals/e1/b7/1f/e1b71fb32e69aecd19365d29a6def7bc.jpg"
+          alt="Fingerprint Unlocking Smart Door Lock">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Remote Unlock -->
+  <section class="remote-unlock">
+    <div class="remote-container">
+      <div class="remote-text">
+        <h1>Remote Unlock from your Phone</h1>
+        <p>
+          Seamless Access Anywhere: Unlock the Doors of your Home Remotely with a Tap of a button on your
+          smartphone!<br><br>
+          Utilizing 256-bit AES Encryption, our secure Remote Unlock feature offers the safest method to grant access to
+          your home for visitors when you're away.
+        </p>
+      </div>
+      <div class="remote-image">
+        <img src="https://www.ec-smarthome.com/wp-content/uploads/2024/06/0617-3.jpg"
+          alt="Remote Unlock Smart Door Lock">
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

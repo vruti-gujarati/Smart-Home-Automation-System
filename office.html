@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Smart Office Design</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body,
+    html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      backdrop-filter: brightness(0.5);
+
+    }
+  
+
+    .navbar {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      height: 72px;
+      background-color: black;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 2rem;
+    }
+
+    .navbar .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 2.0rem;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #80aee2;
+    }
+
+    .navbar .btn {
+      background-color: #9EC6F3;
+      color: #000;
+      padding: 0.39rem 0.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      border: 2px solid black;
+      transition: backgroun 0.3s;
+    }
+
+    .navbar .btn:hover {
+      background-color: #5F99AE;
+      color: black;
+    }
+
+    .hero {
+      background: url('office1.webp') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.8); 
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 0 5%;
+      max-width: 600px;
+    }
+
+    .content h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .content h1 span {
+      font-weight: 600;
+    }
+
+    .content p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .second {
+      background-color: rgba(255, 255, 255, 0.8);
+      background-size: cover;
+      color: #000;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .left {
+      flex: 1;
+      text-align: center;
+    }
+
+    .left img {
+      width: 100%;
+      max-width: 600px;
+      height:450px;
+      border-radius: 18px;
+      box-shadow: 0 5px 15px rgb(0, 0, 0);
+      transition: transform 0.2s ease;
+    }
+    .left img:hover{
+      transform: scale(1.06);
+      cursor: pointer;
+    }
+
+    .right {
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .feature {
+      flex: 1 1 150px;
+      text-align: center;
+    }
+
+    .feature-icon {
+      background-color: #333;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .feature-label {
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+   
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2.2rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">SmartLiv</div>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="product.html"><i class="fas fa-box-open"></i> Products</a></li>
+      <li><a href="solution.html"><i class="fas fa-house-signal"></i> Solutions</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      <li><a href="signin.html" class="btn"><i class="fas fa-person"></i> Sign In</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>DESIGN YOUR <br><span>SMART OFFICE</span></h1>
+      <p>Workspace Automation<br>Solutions that transform daily work life</p>
+    </div>
+  </section>
+
+
+  <div class="second">
+    <div class="container">
+      
+      <!-- Left Side: Image -->
+      <div class="left">
+        <img src="office2.jpg" alt="Smart Blinds Automation">
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="right">
+        <h1>Conference Room Automation</h1>
+        <p>
+            Meetings should be productive, not stressful. Smart automation turns on lights and AC when someone enters and switches them off when the room is empty. No delays, no energy waste. This office design idea enhances efficiency and comfort, ensuring a seamless meeting experience.
+        </p>
+
+        <!-- Features -->
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">💡</div>
+            <div class="feature-label">Light Control</div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">📱</div>
+            <div class="feature-label">AC Control</div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">📺</div>
+            <div class="feature-label">Tv Control</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Sign In</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('Home.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: brightness(0.5);
+      position: relative;
+    }
+    .login-container .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+}
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+      width: 400px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 9px;
+      margin: 8px 0;
+      border: 1px solid #aaa;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 11px;
+      margin-top: 8px;
+      background-color: #243642;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-container button:hover {
+      background-color: #000000;
+    }
+
+    .footer {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loginpage">
+    <div class="login-container">
+      <h2>Sign In To Control Your Home</h2>
+      <h5>Already have an account? Log In</h5>
+      <form onsubmit="login(event)">
+        <input type="text" placeholder="User Name" id="name" required />
+        <input type="email" placeholder="Email Address" id="email" required />
+        <input type="tel" placeholder="Phone Number" id="phone" required />
+        <button type="submit">Sign In</button>
+      </form>
+      <div class="footer">Welcome to your Smart Home System</div>
+    </div>
+  </div>
+
+  <script>
+    function login(event){
+      event.preventDefault();
+      var name=document.getElementById("name").value;
+      var email=document.getElementById("email").value;
+      var phone=document.getElementById("phone").value;
+      
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var phonePattern = /^\d{10}$/;
+
+      if (!name || !emailPattern.test(email) || !phonePattern.test(phone)) {
+        alert("Please enter a valid name, email (with @), and 10-digit phone number.");
+        return;
+      }
+      window.location.href="home.html";
+      document.getElementById("loginPage").style.display = "none"; 
+     }
+  </script>
+</body>
